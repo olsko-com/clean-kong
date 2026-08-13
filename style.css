@@ -360,6 +360,18 @@ h1, h2, h3, h4 {
   }
 }
 
+@keyframes floatBrandBg {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-15px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 /* Sections General Styling */
 .content-section {
   padding: 100px 0;
@@ -390,8 +402,8 @@ h1, h2, h3, h4 {
 
 .intro-container {
   display: grid;
-  grid-template-columns: 1.3fr 0.7fr; /* Left image column even wider */
-  gap: 60px;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
   align-items: center;
 }
 
@@ -449,6 +461,7 @@ h1, h2, h3, h4 {
   background: url('assets/web-clean-kong-section-bg.png') no-repeat right bottom / contain;
   pointer-events: none;
   z-index: 2;
+  animation: floatBrandBg 12s infinite ease-in-out;
 }
 
 .brand-info-block {
@@ -462,6 +475,7 @@ h1, h2, h3, h4 {
 .brand-container {
   display: flex;
   justify-content: flex-start;
+  padding-left: 8%;
   position: relative;
   z-index: 3;
 }
@@ -813,6 +827,10 @@ h1, h2, h3, h4 {
     flex-direction: column;
     text-align: center;
     gap: 12px;
+  }
+
+  .brand-container {
+    padding-left: 0;
   }
 }
 
