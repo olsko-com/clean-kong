@@ -497,7 +497,7 @@ h1, h2, h3, h4 {
   background-color: #111113;
   color: #ffffff;
   position: relative;
-  z-index: 1;
+  z-index: auto;
 }
 
 .brand-container {
@@ -505,7 +505,7 @@ h1, h2, h3, h4 {
   justify-content: flex-start;
   padding-left: 8%;
   position: relative;
-  z-index: 3;
+  z-index: 3 !important;
 }
 
 .brand-text-content {
