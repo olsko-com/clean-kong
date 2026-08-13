@@ -467,8 +467,8 @@ h1, h2, h3, h4 {
   content: "";
   position: absolute;
   bottom: 0;
-  right: 0;
-  width: 100%;
+  right: -20px;
+  width: calc(100% + 20px);
   height: 92%;
   background: url('assets/web-clean-kong-section-bg.png') no-repeat right bottom / contain;
   pointer-events: none;
