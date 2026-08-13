@@ -323,7 +323,7 @@ h1, h2, h3, h4 {
   z-index: 3;
   pointer-events: none;
   display: block;
-  animation: fadeInUpCharacter 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards, floatHeroCharacter 10s infinite ease-in-out 1.2s;
+  animation: fadeInUpCharacter 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards, floatHeroCharacter 7s infinite ease-in-out 1.2s;
 }
 
 @keyframes fadeInUpContent {
@@ -374,13 +374,13 @@ h1, h2, h3, h4 {
 
 @keyframes floatHeroCharacter {
   0% {
-    transform: translate(-50%, 0) translateY(0) rotate(0deg);
+    transform: translate(-50%, 0) translateX(0);
   }
   50% {
-    transform: translate(-50%, 0) translateY(-24px) rotate(1.5deg);
+    transform: translate(-50%, 0) translateX(15px);
   }
   100% {
-    transform: translate(-50%, 0) translateY(0) rotate(0deg);
+    transform: translate(-50%, 0) translateX(0);
   }
 }
 
@@ -452,8 +452,8 @@ h1, h2, h3, h4 {
 
 .intro-description {
   font-weight: 500; /* Montserrat Medium */
-  font-size: 22px;
-  line-height: 1.65;
+  font-size: 25px;
+  line-height: 1.6;
   color: #000000;
 }
 
@@ -486,7 +486,7 @@ h1, h2, h3, h4 {
   background: url('assets/web-clean-kong-section-bg.png') no-repeat right bottom / contain;
   pointer-events: none;
   z-index: 2;
-  animation: floatBrandBg 12s infinite ease-in-out;
+  animation: floatBrandBg 8s infinite ease-in-out;
 }
 
 .brand-info-block {
@@ -827,7 +827,7 @@ h1, h2, h3, h4 {
   }
   
   .intro-description {
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.5;
   }
   
