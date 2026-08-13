@@ -448,7 +448,7 @@ h1, h2, h3, h4 {
 
 .brand-container {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   position: relative;
   z-index: 3;
 }
