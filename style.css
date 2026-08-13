@@ -365,7 +365,7 @@ h1, h2, h3, h4 {
     transform: translateX(0);
   }
   50% {
-    transform: translateX(15px);
+    transform: translateX(25px);
   }
   100% {
     transform: translateX(0);
@@ -374,13 +374,13 @@ h1, h2, h3, h4 {
 
 @keyframes floatHeroCharacter {
   0% {
-    transform: translate(-50%, 0) translateX(0);
+    transform: translate(-50%, 0) translateY(0) rotate(0deg);
   }
   50% {
-    transform: translate(-50%, 0) translateX(12px);
+    transform: translate(-50%, 0) translateY(-24px) rotate(1.5deg);
   }
   100% {
-    transform: translate(-50%, 0) translateX(0);
+    transform: translate(-50%, 0) translateY(0) rotate(0deg);
   }
 }
 
@@ -452,8 +452,8 @@ h1, h2, h3, h4 {
 
 .intro-description {
   font-weight: 500; /* Montserrat Medium */
-  font-size: 20px;
-  line-height: 1.8;
+  font-size: 22px;
+  line-height: 1.65;
   color: #000000;
 }
 
@@ -827,8 +827,8 @@ h1, h2, h3, h4 {
   }
   
   .intro-description {
-    font-size: 16px;
-    line-height: 1.6;
+    font-size: 18px;
+    line-height: 1.5;
   }
   
   .intro-img {
