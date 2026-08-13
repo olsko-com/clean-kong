@@ -713,10 +713,10 @@ h1, h2, h3, h4 {
   }
 
   .hero-foreground-img {
-    width: 130vw;
+    width: 110vw;
     max-width: none;
     height: auto;
-    left: 78%;
+    left: 75%;
   }
 
   .mobile-only {
