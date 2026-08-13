@@ -309,70 +309,21 @@ h1, h2, h3, h4 {
   gap: 16px;
 }
 
-.hero-characters-container {
+.hero-foreground-img {
   position: absolute;
   bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  padding: 0 4%;
-  pointer-events: none;
-  z-index: 2;
-}
-
-.hero-char-left {
-  flex: 2.5;
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-  height: 100%;
-  padding-right: 0;
-  animation: fadeInUpCharacter 1.2s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.hero-char-right {
-  flex: 7.5;
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-start;
-  height: 100%;
-  padding-left: 0;
-  animation: fadeInUpCharacter 1.2s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.sponge-wrapper {
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-  height: 100%;
-  width: 100%;
-  transform-style: preserve-3d;
-  transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
-  will-change: transform;
-}
-
-.hero-foreground-left-img {
-  height: auto;
-  max-height: 45vh;
-  width: auto;
-  max-width: 100%;
-  object-fit: contain;
-  object-position: bottom;
-  display: block;
-  animation: floatSponge 6s infinite ease-in-out;
-}
-
-.hero-foreground-img {
+  left: 53%;
+  transform: translateX(-50%);
   height: auto;
   max-height: 85vh;
   width: auto;
   max-width: 100%;
   object-fit: contain;
   object-position: bottom;
+  z-index: 3;
+  pointer-events: none;
   display: block;
+  animation: fadeInUpCharacter 1.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 @keyframes fadeInUpContent {
@@ -389,23 +340,11 @@ h1, h2, h3, h4 {
 @keyframes fadeInUpCharacter {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translate(-50%, 30px);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes floatSponge {
-  0% {
-    transform: translateY(0) rotate(0deg);
-  }
-  50% {
-    transform: translateY(-10px) rotate(-2deg);
-  }
-  100% {
-    transform: translateY(0) rotate(0deg);
+    transform: translate(-50%, 0);
   }
 }
 
@@ -647,27 +586,10 @@ h1, h2, h3, h4 {
     transform: translateY(0);
   }
 
-  .hero-characters-container {
-    height: auto;
-    display: block;
-    padding: 0;
-  }
-
-  .hero-char-left {
-    display: none;
-  }
-
-  .hero-char-right {
-    display: block;
-    width: 100%;
-    text-align: center;
-  }
-
   .hero-foreground-img {
-    width: 100%;
-    max-width: 100%;
+    width: 100vw;
     height: auto;
-    display: inline-block;
+    left: 50%;
   }
 
   .mobile-only {
