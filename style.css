@@ -429,10 +429,10 @@ h1, h2, h3, h4 {
 .brand-wrapper::after {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
+  bottom: 0;
+  right: 0;
   width: 100%;
-  height: 100%;
+  height: 80%;
   background: url('assets/web-clean-kong-section-bg.png') no-repeat right bottom / contain;
   pointer-events: none;
   z-index: 2;
