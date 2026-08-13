@@ -401,7 +401,7 @@ h1, h2, h3, h4 {
 
 /* Intro Section (Coming Soon) */
 .intro-section {
-  padding: 0 0 120px 0;
+  padding: 0 0 40px 0;
   background-color: var(--bg-primary);
   color: #000000;
   position: relative;
@@ -429,6 +429,7 @@ h1, h2, h3, h4 {
   max-height: 600px; /* Allow image to grow larger */
   height: auto;
   margin-top: -24px; /* overlap into hero section */
+  margin-bottom: -70px; /* overlap into brand section below */
   position: relative;
   z-index: 12;
   animation: floatProductIntro 7s infinite ease-in-out;
@@ -834,6 +835,7 @@ h1, h2, h3, h4 {
   .intro-img {
     max-height: 350px;
     margin-top: 0; /* Remove top overlap on mobile */
+    margin-bottom: 0; /* Reset bottom overlap on mobile */
   }
 
   .brand-heading {
