@@ -88,4 +88,42 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const observer = new IntersectionObserver(observerCallback, observerOptions);
   sections.forEach(section => observer.observe(section));
+
+  // --- Premium 3D Tilt Effect (Mouse Tracking) ---
+  const hero = document.getElementById('home');
+  const spongeWrapper = document.getElementById('sponge-wrapper');
+
+  if (hero && spongeWrapper) {
+    hero.addEventListener('mousemove', (e) => {
+      // Calculate mouse position relative to the center of the hero section (-0.5 to 0.5)
+      const { width, height, left, top } = hero.getBoundingClientRect();
+      const mouseX = (e.clientX - left) / width - 0.5;
+      const mouseY = (e.clientY - top) / height - 0.5;
+
+      // Max rotation angles (in degrees)
+      const maxRotateX = 12; 
+      const maxRotateY = 12; 
+
+      const rotateX = -mouseY * maxRotateX;
+      const rotateY = mouseX * maxRotateY;
+
+      // Subtle parallax shift (in pixels)
+      const translateX = mouseX * 15;
+      const translateY = mouseY * 15;
+
+      // Apply 3D perspective, rotation, and translation
+      spongeWrapper.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translate3d(${translateX}px, ${translateY}px, 0)`;
+    });
+
+    // Reset smoothly when mouse leaves the hero area
+    hero.addEventListener('mouseleave', () => {
+      spongeWrapper.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translate3d(0, 0, 0)';
+      spongeWrapper.style.transition = 'transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1)';
+    });
+
+    // Disable transition during movement for real-time responsiveness
+    hero.addEventListener('mouseenter', () => {
+      spongeWrapper.style.transition = 'none';
+    });
+  }
 });
