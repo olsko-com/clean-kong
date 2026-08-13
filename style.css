@@ -547,27 +547,39 @@ h1, h2, h3, h4 {
 
 /* Footer Section */
 .main-footer {
-  background-color: rgba(255, 255, 255, 0.1);
-  padding: 40px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: #0f3b55;
+  padding: 20px 0;
+  color: rgba(255, 255, 255, 0.7);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer-container {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  gap: 20px;
+  flex-direction: row;
+  width: 100%;
 }
 
-.footer-logo-img {
-  height: 40px;
-  width: auto;
-  opacity: 0.8;
+.footer-links {
+  display: flex;
+  gap: 24px;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color var(--transition-fast);
+}
+
+.footer-links a:hover {
+  color: #ffffff;
 }
 
 .copyright {
-  font-size: 0.85rem;
-  color: var(--text-secondary);
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 /* Hamburger Icon Animation */
@@ -782,6 +794,12 @@ h1, h2, h3, h4 {
   .brand-description {
     font-size: 16px;
     line-height: 1.6;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
   }
 }
 
