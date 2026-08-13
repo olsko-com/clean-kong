@@ -404,18 +404,18 @@ h1, h2, h3, h4 {
 }
 
 .intro-heading {
-  font-size: 2.5rem;
-  font-weight: 700;
-  text-transform: uppercase;
+  font-size: 4rem;
+  font-weight: 900;
+  font-style: italic;
   color: #000000;
-  letter-spacing: 0.05em;
+  letter-spacing: -0.05em;
   margin-bottom: 20px;
 }
 
 .intro-description {
   font-weight: 500; /* Montserrat Medium */
-  font-size: 1.5rem;
-  line-height: 1.7;
+  font-size: 20px;
+  line-height: 1.8;
   color: #000000;
 }
 
@@ -493,10 +493,23 @@ h1, h2, h3, h4 {
 
 /* Bottom Banner Section */
 .bottom-banner-section {
+  position: relative;
   width: 100%;
   height: auto;
   overflow: hidden;
   display: block;
+}
+
+.bottom-banner-section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 93%;
+  background: url('assets/Overlay-unten.png') no-repeat left bottom / contain;
+  pointer-events: none;
+  z-index: 2;
 }
 
 .banner-img {
@@ -741,12 +754,16 @@ h1, h2, h3, h4 {
   }
 
   .intro-heading {
-    font-size: 1.8rem;
+    font-size: 2rem;
+    font-weight: 900;
+    font-style: italic;
+    letter-spacing: -0.04em;
     margin-bottom: 16px;
   }
   
   .intro-description {
-    font-size: 1.25rem;
+    font-size: 16px;
+    line-height: 1.6;
   }
   
   .intro-img {
