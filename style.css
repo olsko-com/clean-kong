@@ -461,15 +461,14 @@ h1, h2, h3, h4 {
 .brand-heading {
   font-size: 2.5rem;
   font-weight: 700;
-  text-transform: uppercase;
   color: #ffffff;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.02em;
   margin-bottom: 24px;
 }
 
 .brand-description {
   font-weight: 500; /* Montserrat Medium */
-  font-size: 1.6rem;
+  font-size: 18px;
   line-height: 1.8;
   color: #ffffff;
   margin-bottom: 32px;
@@ -750,8 +749,13 @@ h1, h2, h3, h4 {
     margin-top: 0; /* Remove top overlap on mobile */
   }
 
+  .brand-heading {
+    font-size: 1.8rem;
+    margin-bottom: 16px;
+  }
+
   .brand-description {
-    font-size: 1.25rem;
+    font-size: 16px;
     line-height: 1.6;
   }
 }
