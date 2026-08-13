@@ -447,6 +447,7 @@ h1, h2, h3, h4 {
   color: #000000;
   letter-spacing: -0.05em;
   margin-bottom: 20px;
+  margin-left: -20px; /* Offset slightly left of the description copy */
 }
 
 .intro-description {
@@ -822,6 +823,7 @@ h1, h2, h3, h4 {
     font-style: italic;
     letter-spacing: -0.04em;
     margin-bottom: 16px;
+    margin-left: 0; /* Keep centered on mobile */
   }
   
   .intro-description {
