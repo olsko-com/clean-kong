@@ -713,10 +713,10 @@ h1, h2, h3, h4 {
   }
 
   .hero-foreground-img {
-    width: 140vw;
+    width: 130vw;
     max-width: none;
     height: auto;
-    left: 80%;
+    left: 78%;
   }
 
   .mobile-only {
@@ -858,8 +858,17 @@ h1, h2, h3, h4 {
     gap: 12px;
   }
 
+  .brand-info-block {
+    padding: 60px 24px;
+  }
+
   .brand-container {
+    justify-content: center;
     padding-left: 0;
+  }
+
+  .brand-text-content {
+    text-align: center;
   }
 
   .brand-wrapper::before {
