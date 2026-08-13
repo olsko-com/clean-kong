@@ -348,6 +348,18 @@ h1, h2, h3, h4 {
   }
 }
 
+@keyframes floatProductIntro {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(1deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
 /* Sections General Styling */
 .content-section {
   padding: 100px 0;
@@ -395,6 +407,7 @@ h1, h2, h3, h4 {
   margin-top: -24px; /* overlap into hero section */
   position: relative;
   z-index: 12;
+  animation: floatProductIntro 7s infinite ease-in-out;
 }
 
 .intro-text-col {
