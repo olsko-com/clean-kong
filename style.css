@@ -422,8 +422,8 @@ h1, h2, h3, h4 {
 /* Brand Section */
 .brand-section {
   padding: 80px 0 120px 0;
-  background-color: var(--bg-primary); /* same blue/turquoise bg */
-  color: #000000;
+  background-color: #111113;
+  color: #ffffff;
 }
 
 .brand-container {
@@ -433,14 +433,14 @@ h1, h2, h3, h4 {
 
 .brand-text-content {
   max-width: 900px;
-  text-align: center;
+  text-align: left;
 }
 
 .brand-description {
   font-weight: 500; /* Montserrat Medium */
   font-size: 1.6rem;
   line-height: 1.8;
-  color: #000000;
+  color: #ffffff;
 }
 
 /* Bottom Banner Section */
