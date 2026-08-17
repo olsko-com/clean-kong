@@ -523,7 +523,7 @@ h1, h2, h3, h4 {
 }
 
 .highlight-pink {
-  color: #ef4488;
+  color: #e35387;
 }
 
 .brand-description {
@@ -567,7 +567,8 @@ h1, h2, h3, h4 {
   z-index: 2;
 }
 
-.banner-img {
+.banner-img,
+.banner-mobile-img {
   width: 100%;
   height: auto;
   display: block;
@@ -714,13 +715,6 @@ h1, h2, h3, h4 {
     transform: translateY(0);
   }
 
-  .hero-foreground-img {
-    width: 110vw;
-    max-width: none;
-    height: auto;
-    left: 75%;
-  }
-
   .mobile-only {
     display: block !important;
   }
@@ -730,8 +724,18 @@ h1, h2, h3, h4 {
   }
 
   .hero-section {
-    height: 70vh;
-    padding-top: var(--header-height);
+    height: auto;
+    min-height: auto;
+    padding-top: 0;
+    background: none;
+    display: block;
+    overflow: hidden;
+  }
+
+  .hero-mobile-img {
+    width: 100%;
+    height: auto;
+    display: block !important;
   }
   
   .hero-container {
@@ -861,7 +865,7 @@ h1, h2, h3, h4 {
   }
 
   .brand-info-block {
-    padding: 60px 24px 160px 24px;
+    padding: 60px 24px 60px 24px;
   }
 
   .brand-container {
@@ -873,8 +877,19 @@ h1, h2, h3, h4 {
     text-align: center;
   }
 
-  .brand-wrapper::before {
-    display: none;
+  .brand-wrapper::before,
+  .brand-wrapper::after {
+    display: none !important;
+  }
+
+  .bottom-banner-section::after {
+    display: none !important;
+  }
+
+  .banner-mobile-img {
+    width: 100%;
+    height: auto;
+    display: block !important;
   }
 }
 
