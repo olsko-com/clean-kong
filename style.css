@@ -914,3 +914,82 @@ h1, h2, h3, h4 {
     width: 100%;
   }
 }
+
+/* Legal / Impressum Page */
+.legal-section {
+  padding: calc(var(--header-height) + 60px) 0 80px 0;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+}
+
+.legal-card {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 28px;
+  padding: 50px 60px;
+  box-shadow: 0 15px 40px var(--glass-shadow);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.legal-card h1 {
+  font-size: 2.8rem;
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: -0.04em;
+  margin-bottom: 24px;
+  color: var(--text-primary);
+}
+
+.legal-card h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 28px 0 10px 0;
+  color: var(--text-primary);
+}
+
+.legal-card p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+
+.legal-card p strong {
+  color: var(--text-primary);
+}
+
+.legal-card a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color var(--transition-fast);
+}
+
+.legal-card a:hover {
+  color: var(--coral);
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .legal-section {
+    padding: calc(var(--header-height) + 20px) 0 60px 0;
+  }
+  .legal-card {
+    padding: 32px 24px;
+    border-radius: 20px;
+  }
+  .legal-card h1 {
+    font-size: 2rem;
+  }
+  .legal-card h2 {
+    font-size: 1.15rem;
+  }
+  .legal-card p {
+    font-size: 0.95rem;
+  }
+}
+
