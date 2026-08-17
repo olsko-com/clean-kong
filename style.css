@@ -865,7 +865,7 @@ h1, h2, h3, h4 {
   }
 
   .brand-info-block {
-    padding: 60px 24px 60px 24px;
+    padding: 50px 20px 220px 20px;
   }
 
   .brand-container {
@@ -877,9 +877,21 @@ h1, h2, h3, h4 {
     text-align: center;
   }
 
-  .brand-wrapper::before,
-  .brand-wrapper::after {
+  .brand-wrapper::before {
     display: none !important;
+  }
+
+  .brand-wrapper::after {
+    display: block !important;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    max-width: 380px;
+    height: 250px;
+    background: url('assets/web-clean-kong-section-bg.png') no-repeat right bottom / contain;
+    pointer-events: none;
+    z-index: 2;
   }
 
   .bottom-banner-section::after {
