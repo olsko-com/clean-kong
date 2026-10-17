@@ -148,11 +148,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalSpecs = document.getElementById('modal-specs');
 
     const mockupMap = {
-      'Clean-Kong-SmileCleanDuoSwamme1frei.webp': 'Clean-Kong-Smile-Clean-Duo-Swa%CC%88mme-1.jpg',
-      'Clean-KongDuoPowerschwammefreigestellt.webp': 'Clean-Kong-DuoPowerschwa%CC%88mme.jpg',
+      'Clean-Kong-SmileCleanDuoSwamme1frei.webp': 'Clean-Kong-Smile-Clean-Duo-Swämme-1.jpg',
+      'Clean-KongDuoPowerschwammefreigestellt.webp': 'Clean-Kong-DuoPowerschwämme.jpg',
       'Clean-Kong-Nano-GlanzCleanPadsfrei.webp': 'Clean-Kong-Nano-Glanz-Clean-Pads.jpg',
-      'Clean-Kong-Magic-Mikrofaser-Geschirrhandtucherfreigestellt.webp': 'Clean-Kong-Magic-Mikrofaser-Geschirrhandtu%CC%88cher.jpg',
-      'Clean-Kong-Multi-CleanMikrofasertucherfrei.webp': 'Clean-Kong-Multi-Clean-Mikrofasertu%CC%88cher.jpg',
+      'Clean-Kong-Magic-Mikrofaser-Geschirrhandtucherfreigestellt.webp': 'Clean-Kong-Magic-Mikrofaser-Geschirrhandtücher.jpg',
+      'Clean-Kong-Multi-CleanMikrofasertucherfrei.webp': 'Clean-Kong-Multi-Clean-Mikrofasertücher.jpg',
       'Clean-Kong-Spray-MatePinkfrei.webp': 'Clean-Kong-Spray-Mate-Pink.jpg',
       'Clean-Kong-Spray-MateMintfrei.webp': 'Clean-Kong-Spray-Mate-Mint.jpg',
       'Clean-Kong-Sweep-TechPinkfrei.webp': 'Clean-Kong-Sweep-Tech-Pink.jpg',
