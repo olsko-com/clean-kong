@@ -1530,7 +1530,7 @@ h1, h2, h3, h4 {
   -webkit-backdrop-filter: blur(24px);
   color: var(--text-primary);
   box-shadow: 0 32px 80px rgba(17, 17, 19, 0.35);
-  overflow: hidden;
+  overflow: visible;
 }
 
 .product-modal::backdrop {
@@ -1549,26 +1549,28 @@ h1, h2, h3, h4 {
 
 .modal-close-btn {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: -54px;
+  right: 0;
   width: 42px;
   height: 42px;
   border-radius: 50%;
-  border: none;
+  border: 2px solid rgba(255, 255, 255, 0.85);
   background: #111113;
   color: #ffffff;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 800;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background var(--transition-fast), transform var(--transition-fast);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.28);
+  transition: background var(--transition-fast), transform var(--transition-fast), border-color var(--transition-fast);
   z-index: 10;
 }
 
 .modal-close-btn:hover {
   background: #ef4488;
+  border-color: #ffffff;
   transform: rotate(90deg);
 }
 
