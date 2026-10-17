@@ -1549,8 +1549,8 @@ h1, h2, h3, h4 {
 
 .modal-close-btn {
   position: absolute;
-  top: -54px;
-  right: 0;
+  top: -48px;
+  right: -48px;
   width: 42px;
   height: 42px;
   border-radius: 50%;
@@ -1663,6 +1663,11 @@ h1, h2, h3, h4 {
   .modal-inner {
     grid-template-columns: 1fr;
     padding: 28px 22px;
+  }
+
+  .modal-close-btn {
+    top: -50px;
+    right: 0;
   }
 
   .modal-image-stage {
