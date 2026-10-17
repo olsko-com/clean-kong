@@ -166,13 +166,17 @@ document.addEventListener('DOMContentLoaded', () => {
           modalImg.src = imgEl.getAttribute('src');
           modalImg.alt = imgEl.getAttribute('alt');
         }
-        if (modalCategory && catEl) modalCategory.textContent = catEl.textContent;
+        if (modalCategory) {
+          modalCategory.textContent = catEl ? catEl.textContent : (card.getAttribute('data-cat-label') || 'CleanKong');
+        }
         if (modalPack && packEl) {
           modalPack.textContent = packEl.textContent;
           modalPack.className = 'product-pack-badge';
         }
         if (modalTitle && titleEl) modalTitle.textContent = titleEl.textContent;
-        if (modalClaim && claimEl) modalClaim.textContent = claimEl.textContent;
+        if (modalClaim) {
+          modalClaim.textContent = claimEl ? claimEl.textContent : (card.getAttribute('data-claim') || '');
+        }
         if (modalDesc && descEl) {
           modalDesc.textContent = extraTip ? `${descEl.textContent} ${extraTip}` : descEl.textContent;
         }

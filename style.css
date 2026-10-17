@@ -1688,20 +1688,8 @@ h1, h2, h3, h4 {
    Product Page (Version 2) - Frameless Open Cutout Showcase (No Cards/Blur)
    ========================================================================== */
 
-.v2-intro-section {
-  padding: 20px 0 50px 0;
-  background-color: var(--bg-primary);
-  color: #000000;
-  position: relative;
-  z-index: 10;
-}
-
-.v2-intro-section .intro-heading {
-  line-height: 1.02;
-}
-
 .v2-showcase-section {
-  padding: 30px 0 120px 0;
+  padding: 56px 0 120px 0;
   background-color: var(--bg-primary);
   position: relative;
   z-index: 10;
@@ -1711,22 +1699,23 @@ h1, h2, h3, h4 {
   max-width: 1380px;
 }
 
-/* Minimalist Top Toolbar (Underline Filter + View Mode Toggle) */
+/* Minimalist Top Toolbar (Centered Underline Filter) */
 .v2-toolbar {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 24px;
   padding-bottom: 20px;
   margin-bottom: 64px;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.08);
 }
 
 .v2-filter-nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 32px;
+  justify-content: center;
+  gap: 36px;
 }
 
 .v2-filter-link {
@@ -1735,11 +1724,11 @@ h1, h2, h3, h4 {
   border: none;
   padding: 8px 0;
   font-family: var(--font-sans);
-  font-size: 1.05rem;
+  font-size: 1.08rem;
   font-weight: 800;
   font-style: italic;
   letter-spacing: -0.02em;
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.48);
   cursor: pointer;
   position: relative;
   transition: color var(--transition-fast);
@@ -1773,33 +1762,46 @@ h1, h2, h3, h4 {
   vertical-align: super;
 }
 
-/* View Switcher (Grid vs Lookbook) */
+/* Small Floating View Switcher (Bottom Right - Only for Comparison) */
 .v2-view-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 950;
   display: inline-flex;
   align-items: center;
-  gap: 16px;
+  gap: 4px;
+  padding: 5px;
+  border-radius: 999px;
+  background: rgba(17, 17, 19, 0.82);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.22);
 }
 
 .v2-view-btn {
   appearance: none;
-  background: none;
+  background: transparent;
   border: none;
   font-family: var(--font-sans);
-  font-size: 0.88rem;
+  font-size: 0.72rem;
   font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: rgba(0, 0, 0, 0.45);
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.65);
   cursor: pointer;
-  padding: 6px 0;
-  border-bottom: 2px solid transparent;
+  padding: 6px 12px;
+  border-radius: 999px;
   transition: all var(--transition-fast);
 }
 
-.v2-view-btn:hover,
+.v2-view-btn:hover {
+  color: #ffffff;
+}
+
 .v2-view-btn.active {
-  color: #000000;
-  border-bottom-color: #000000;
+  background: #ef4488;
+  color: #ffffff;
 }
 
 /* Frameless Open Product Grid */
@@ -1807,7 +1809,7 @@ h1, h2, h3, h4 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 56px;
-  row-gap: 88px;
+  row-gap: 84px;
   align-items: start;
 }
 
@@ -1836,7 +1838,7 @@ h1, h2, h3, h4 {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
   cursor: pointer;
 }
 
@@ -1908,71 +1910,39 @@ h1, h2, h3, h4 {
   transform: translateY(-16px) scale(1.34) rotate(-2deg);
 }
 
-/* Open Typography directly on background */
-.v2-meta-line {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 0.82rem;
+/* Streamlined Open Typography directly on background */
+.v2-meta-edition {
+  display: inline-block;
+  font-size: 0.8rem;
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: #000000;
-  margin-bottom: 8px;
-}
-
-.v2-meta-dot {
-  color: #ef4488;
-  font-size: 1rem;
-}
-
-.v2-meta-edition {
   color: #ef4488;
   font-style: italic;
+  margin-bottom: 6px;
 }
 
 .v2-meta-edition--mint {
-  color: #0e5a63;
+  color: #0d5962;
 }
 
 .v2-item-title {
-  font-size: 2rem;
+  font-size: 1.9rem;
   font-weight: 900;
   font-style: italic;
   letter-spacing: -0.045em;
-  line-height: 1.08;
+  line-height: 1.1;
   color: #000000;
   margin-bottom: 10px;
 }
 
-.v2-item-claim {
-  font-size: 1rem;
-  font-weight: 800;
-  font-style: italic;
-  color: #ef4488;
-  margin-bottom: 12px;
-}
-
 .v2-item-desc {
-  font-size: 1rem;
+  font-size: 0.98rem;
   font-weight: 500;
-  line-height: 1.6;
-  color: #000000;
-  max-width: 370px;
-  margin-bottom: 16px;
-}
-
-.v2-inline-specs {
-  font-size: 0.84rem;
-  font-weight: 800;
+  line-height: 1.55;
   color: #12282c;
-  margin-bottom: 20px;
-  letter-spacing: 0.01em;
-}
-
-.v2-inline-specs span {
-  color: #ef4488;
-  padding: 0 6px;
+  max-width: 340px;
+  margin-bottom: 16px;
 }
 
 .v2-detail-link {
@@ -1980,29 +1950,29 @@ h1, h2, h3, h4 {
   background: none;
   border: none;
   border-bottom: 2.5px solid #000000;
-  padding: 4px 0;
+  padding: 3px 0;
   font-family: var(--font-sans);
-  font-size: 0.92rem;
+  font-size: 0.88rem;
   font-weight: 900;
   font-style: italic;
   color: #000000;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 7px;
   transition: color var(--transition-fast), border-color var(--transition-fast), gap var(--transition-fast);
 }
 
 .v2-detail-link:hover {
   color: #ef4488;
   border-bottom-color: #ef4488;
-  gap: 13px;
+  gap: 12px;
 }
 
 /* Lookbook View Mode (Alternating Large Home-Style Split Rows) */
 .v2-open-grid.v2-lookbook-mode {
   grid-template-columns: 1fr;
-  row-gap: 100px;
+  row-gap: 96px;
 }
 
 .v2-open-grid.v2-lookbook-mode .v2-product-item {
@@ -2041,7 +2011,7 @@ h1, h2, h3, h4 {
 
 .v2-open-grid.v2-lookbook-mode .v2-item-desc {
   font-size: 1.2rem;
-  max-width: 540px;
+  max-width: 520px;
 }
 
 @media (max-width: 1100px) {
@@ -2053,10 +2023,12 @@ h1, h2, h3, h4 {
 }
 
 @media (max-width: 768px) {
+  .v2-showcase-section {
+    padding: 36px 0 90px 0;
+  }
+
   .v2-toolbar {
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 44px;
+    margin-bottom: 40px;
   }
 
   .v2-filter-nav {
@@ -2068,7 +2040,8 @@ h1, h2, h3, h4 {
   }
 
   .v2-view-toggle {
-    display: none;
+    bottom: 14px;
+    right: 14px;
   }
 
   .v2-open-grid,
