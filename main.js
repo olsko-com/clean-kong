@@ -89,9 +89,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const observer = new IntersectionObserver(observerCallback, observerOptions);
   sections.forEach(section => observer.observe(section));
 
-  // --- Product Category Filter (Version 1 Product Page) ---
-  const filterButtons = document.querySelectorAll('.filter-btn');
-  const productCards = document.querySelectorAll('.product-card');
+  // --- Product Category Filter (Version 1 & Version 2) ---
+  const filterButtons = document.querySelectorAll('.filter-btn, .v2-filter-link');
+  const productCards = document.querySelectorAll('.product-card, .v2-product-item');
 
   if (filterButtons.length > 0 && productCards.length > 0) {
     filterButtons.forEach(btn => {
@@ -113,12 +113,32 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // --- Version 2 View Mode Switcher (Grid vs Lookbook) ---
+  const viewButtons = document.querySelectorAll('.v2-view-btn');
+  const v2Grid = document.querySelector('.v2-open-grid');
+
+  if (viewButtons.length > 0 && v2Grid) {
+    viewButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const mode = btn.getAttribute('data-view');
+        viewButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        if (mode === 'lookbook') {
+          v2Grid.classList.add('v2-lookbook-mode');
+        } else {
+          v2Grid.classList.remove('v2-lookbook-mode');
+        }
+      });
+    });
+  }
+
   // --- Product Quick-View Modal (<dialog>) ---
   const modal = document.getElementById('product-modal');
   const modalCloseBtn = document.getElementById('modal-close-btn');
-  const detailButtons = document.querySelectorAll('.product-detail-btn');
+  const detailTriggers = document.querySelectorAll('.product-detail-btn, .v2-detail-link, .v2-cutout-stage');
 
-  if (modal && detailButtons.length > 0) {
+  if (modal && detailTriggers.length > 0) {
     const modalImg = document.getElementById('modal-img');
     const modalCategory = document.getElementById('modal-category');
     const modalPack = document.getElementById('modal-pack');
@@ -127,18 +147,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalDesc = document.getElementById('modal-desc');
     const modalSpecs = document.getElementById('modal-specs');
 
-    detailButtons.forEach(btn => {
+    detailTriggers.forEach(btn => {
       btn.addEventListener('click', () => {
-        const card = btn.closest('.product-card');
+        const card = btn.closest('.product-card, .v2-product-item');
         if (!card) return;
 
-        const imgEl = card.querySelector('.product-cutout-img');
-        const catEl = card.querySelector('.product-category-tag');
-        const packEl = card.querySelector('.product-pack-badge');
-        const titleEl = card.querySelector('.product-title');
-        const claimEl = card.querySelector('.product-claim');
-        const descEl = card.querySelector('.product-desc');
+        const imgEl = card.querySelector('.product-cutout-img, .v2-cutout-img');
+        const catEl = card.querySelector('.product-category-tag, .v2-meta-cat');
+        const packEl = card.querySelector('.product-pack-badge, .v2-meta-edition');
+        const titleEl = card.querySelector('.product-title, .v2-item-title');
+        const claimEl = card.querySelector('.product-claim, .v2-item-claim');
+        const descEl = card.querySelector('.product-desc, .v2-item-desc');
         const featureEls = card.querySelectorAll('.product-features li');
+        const inlineSpecs = card.getAttribute('data-specs') || '';
         const extraTip = card.getAttribute('data-tip') || '';
 
         if (modalImg && imgEl) {
@@ -148,7 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (modalCategory && catEl) modalCategory.textContent = catEl.textContent;
         if (modalPack && packEl) {
           modalPack.textContent = packEl.textContent;
-          modalPack.className = packEl.className;
+          modalPack.className = 'product-pack-badge';
         }
         if (modalTitle && titleEl) modalTitle.textContent = titleEl.textContent;
         if (modalClaim && claimEl) modalClaim.textContent = claimEl.textContent;
@@ -157,11 +178,19 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         if (modalSpecs) {
           modalSpecs.innerHTML = '';
-          featureEls.forEach(li => {
-            const item = document.createElement('li');
-            item.textContent = li.textContent;
-            modalSpecs.appendChild(item);
-          });
+          if (featureEls.length > 0) {
+            featureEls.forEach(li => {
+              const item = document.createElement('li');
+              item.textContent = li.textContent;
+              modalSpecs.appendChild(item);
+            });
+          } else if (inlineSpecs) {
+            inlineSpecs.split('|').forEach(spec => {
+              const item = document.createElement('li');
+              item.textContent = `✓ ${spec.trim()}`;
+              modalSpecs.appendChild(item);
+            });
+          }
         }
 
         modal.showModal();
