@@ -1921,6 +1921,14 @@ h1, h2, h3, h4 {
 }
 
 /* Streamlined Open Typography directly on background */
+.v2-item-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
 .v2-meta-edition {
   display: inline-block;
   font-size: 0.8rem;
@@ -1952,7 +1960,8 @@ h1, h2, h3, h4 {
   line-height: 1.55;
   color: #12282c;
   max-width: 340px;
-  margin-bottom: 16px;
+  margin: 0 auto 16px auto;
+  text-align: center;
 }
 
 .v2-detail-link {
@@ -1990,6 +1999,17 @@ h1, h2, h3, h4 {
   grid-template-columns: 1.05fr 0.95fr;
   gap: 64px;
   align-items: center;
+  text-align: left;
+}
+
+.v2-open-grid.v2-lookbook-mode .v2-item-content {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.v2-open-grid.v2-lookbook-mode .v2-item-desc {
+  margin-left: 0;
+  margin-right: 0;
   text-align: left;
 }
 
