@@ -147,6 +147,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalDesc = document.getElementById('modal-desc');
     const modalSpecs = document.getElementById('modal-specs');
 
+    const mockupMap = {
+      'Clean-Kong-SmileCleanDuoSwamme1frei.webp': 'Clean-Kong-Smile-Clean-Duo-Swa%CC%88mme-1.jpg',
+      'Clean-KongDuoPowerschwammefreigestellt.webp': 'Clean-Kong-DuoPowerschwa%CC%88mme.jpg',
+      'Clean-Kong-Nano-GlanzCleanPadsfrei.webp': 'Clean-Kong-Nano-Glanz-Clean-Pads.jpg',
+      'Clean-Kong-Magic-Mikrofaser-Geschirrhandtucherfreigestellt.webp': 'Clean-Kong-Magic-Mikrofaser-Geschirrhandtu%CC%88cher.jpg',
+      'Clean-Kong-Multi-CleanMikrofasertucherfrei.webp': 'Clean-Kong-Multi-Clean-Mikrofasertu%CC%88cher.jpg',
+      'Clean-Kong-Spray-MatePinkfrei.webp': 'Clean-Kong-Spray-Mate-Pink.jpg',
+      'Clean-Kong-Spray-MateMintfrei.webp': 'Clean-Kong-Spray-Mate-Mint.jpg',
+      'Clean-Kong-Sweep-TechPinkfrei.webp': 'Clean-Kong-Sweep-Tech-Pink.jpg',
+      'Clean-Kong-Sweep-TechMintfrei.webp': 'Clean-Kong-Sweep-Tech-Mint.jpg',
+      'Clean-Kong-Wet-Dry-WischsystemPinkfrei.webp': 'Clean-Kong-Wet-Dry-Wischsystem-Pink.jpg',
+      'Clean-Kong-Wet-Dry-WischsystemMintfrei.webp': 'Clean-Kong-Wet-Dry-Wischsystem-Mint.jpg'
+    };
+
     detailTriggers.forEach(btn => {
       btn.addEventListener('click', () => {
         const card = btn.closest('.product-card, .v2-product-item');
@@ -163,7 +177,18 @@ document.addEventListener('DOMContentLoaded', () => {
         const extraTip = card.getAttribute('data-tip') || '';
 
         if (modalImg && imgEl) {
-          modalImg.src = imgEl.getAttribute('src');
+          const rawSrc = imgEl.getAttribute('src') || '';
+          const customMockup = card.getAttribute('data-mockup');
+          const fileName = rawSrc.split('/').pop();
+          const basePrefix = rawSrc.includes('../assets/') ? '../assets/' : 'assets/';
+
+          if (customMockup) {
+            modalImg.src = customMockup;
+          } else if (mockupMap[fileName]) {
+            modalImg.src = `${basePrefix}Produkte_Mockups/${mockupMap[fileName]}`;
+          } else {
+            modalImg.src = rawSrc;
+          }
           modalImg.alt = imgEl.getAttribute('alt');
         }
         if (modalCategory) {
