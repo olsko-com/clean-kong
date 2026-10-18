@@ -1113,13 +1113,14 @@ h1, h2, h3, h4 {
   line-height: 1.65;
   color: #12282c;
   max-width: 620px;
-  margin-bottom: 32px;
+  margin-bottom: 20px;
 }
 
 .products-hero-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
+  margin-top: 12px;
   margin-bottom: 36px;
 }
 
