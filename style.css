@@ -477,18 +477,18 @@ h1, h2, h3, h4 {
 .intro-section--welcome .intro-subheading {
   font-size: clamp(1.1rem, 1.4vw, 1.28rem);
   font-weight: 700;
-  line-height: 1.38;
+  line-height: 1.32;
   color: #000000;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
   max-width: 600px;
 }
 
 .intro-section--welcome .intro-description {
   font-size: 19px;
   font-weight: 500;
-  line-height: 1.6;
+  line-height: 1.42;
   color: #12282c;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
   max-width: 600px;
 }
 
@@ -565,9 +565,9 @@ h1, h2, h3, h4 {
 .brand-description {
   font-weight: 500; /* Montserrat Medium */
   font-size: 20px;
-  line-height: 1.8;
+  line-height: 1.45;
   color: #ffffff;
-  margin-bottom: 32px;
+  margin-bottom: 22px;
 }
 
 .brand-description:last-child {
@@ -1110,10 +1110,10 @@ h1, h2, h3, h4 {
 .products-hero-lead {
   font-size: clamp(1.08rem, 1.4vw, 1.25rem);
   font-weight: 500;
-  line-height: 1.48;
+  line-height: 1.38;
   color: #12282c;
   max-width: 620px;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
 .products-hero-actions {
@@ -1560,7 +1560,7 @@ h1, h2, h3, h4 {
   font-size: 0.9rem;
   font-weight: 500;
   color: rgba(255, 255, 255, 0.85);
-  line-height: 1.45;
+  line-height: 1.36;
   display: block;
 }
 
@@ -1643,7 +1643,7 @@ h1, h2, h3, h4 {
 }
 
 .modal-content h3 {
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-weight: 900;
   font-style: italic;
   letter-spacing: -0.04em;
@@ -1656,12 +1656,12 @@ h1, h2, h3, h4 {
   font-weight: 800;
   font-style: italic;
   color: #ef4488;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 
 .modal-desc {
-  font-size: 1rem;
-  line-height: 1.65;
+  font-size: 0.98rem;
+  line-height: 1.44;
   color: #1d393f;
   margin-bottom: 20px;
 }
@@ -2004,10 +2004,10 @@ h1, h2, h3, h4 {
 .v2-item-desc {
   font-size: 0.98rem;
   font-weight: 500;
-  line-height: 1.5;
+  line-height: 1.38;
   color: #12282c;
   max-width: 340px;
-  margin: 0 auto 16px auto;
+  margin: 0 auto 14px auto;
   text-align: center;
 }
 
@@ -2192,7 +2192,7 @@ h1, h2, h3, h4 {
 .lifestyle-section-subtitle {
   font-size: 1.1rem;
   font-weight: 500;
-  line-height: 1.48;
+  line-height: 1.38;
   color: #12282c;
 }
 
@@ -2320,15 +2320,15 @@ h1, h2, h3, h4 {
   letter-spacing: -0.04em;
   line-height: 1.1;
   color: #ffffff;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
 .lifestyle-banner-desc {
-  font-size: 1.05rem;
+  font-size: 1.02rem;
   font-weight: 500;
-  line-height: 1.65;
+  line-height: 1.42;
   color: rgba(255, 255, 255, 0.9);
-  margin-bottom: 28px;
+  margin-bottom: 24px;
 }
 
 @media (max-width: 992px) {
