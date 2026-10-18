@@ -474,12 +474,13 @@ h1, h2, h3, h4 {
 }
 
 .intro-section--welcome {
-  padding: 120px 0 130px 0;
-  min-height: 680px;
+  padding: 135px 0 140px 0;
+  min-height: 740px;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  overflow-x: clip;
+  overflow-y: visible;
 }
 
 .intro-section--welcome .intro-container {
@@ -499,7 +500,7 @@ h1, h2, h3, h4 {
   left: -20px;
   bottom: 0;
   height: 96%;
-  max-height: 670px;
+  max-height: 710px;
   width: auto;
   max-width: 48vw;
   object-fit: contain;
@@ -512,12 +513,12 @@ h1, h2, h3, h4 {
 
 .intro-section--welcome .intro-img--tower-right {
   position: absolute;
-  right: clamp(16px, 5vw, 90px);
-  bottom: -14px;
-  height: 94%;
-  max-height: 650px;
+  right: clamp(8px, 3vw, 56px);
+  bottom: -18px;
+  height: 114%;
+  max-height: 850px;
   width: auto;
-  max-width: 28vw;
+  max-width: 36vw;
   object-fit: contain;
   object-position: right bottom;
   margin: 0;
