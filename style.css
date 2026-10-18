@@ -489,7 +489,8 @@ h1, h2, h3, h4 {
   width: 100%;
 }
 
-.intro-section--welcome .intro-image-col {
+.intro-section--welcome .intro-image-col,
+.intro-section--welcome .intro-tower-col {
   position: static;
 }
 
@@ -509,10 +510,27 @@ h1, h2, h3, h4 {
   animation: floatIntroLeft 8s infinite ease-in-out;
 }
 
+.intro-section--welcome .intro-img--tower-right {
+  position: absolute;
+  right: clamp(16px, 5vw, 90px);
+  bottom: -14px;
+  height: 94%;
+  max-height: 650px;
+  width: auto;
+  max-width: 28vw;
+  object-fit: contain;
+  object-position: right bottom;
+  margin: 0;
+  z-index: 12;
+  pointer-events: none;
+  filter: drop-shadow(-14px 18px 28px rgba(18, 40, 44, 0.16));
+  animation: none;
+}
+
 .intro-section--welcome .intro-text-col {
   align-items: center;
   text-align: center;
-  max-width: 640px;
+  max-width: 600px;
   margin: 0 auto;
 }
 
@@ -957,9 +975,17 @@ h1, h2, h3, h4 {
   .intro-section--welcome .intro-img--edge-left {
     left: -12px;
     bottom: 0;
-    height: 290px;
-    max-height: 290px;
-    max-width: 85vw;
+    height: 280px;
+    max-height: 280px;
+    max-width: 58vw;
+  }
+
+  .intro-section--welcome .intro-img--tower-right {
+    right: 12px;
+    bottom: -10px;
+    height: 265px;
+    max-height: 265px;
+    max-width: 38vw;
   }
 
   .brand-heading {
