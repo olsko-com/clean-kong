@@ -460,6 +460,42 @@ h1, h2, h3, h4 {
   color: #000000;
 }
 
+/* Welcome Intro Variant on /entwicklung (aligned with Brand & Product Hero typography) */
+.intro-section--welcome {
+  padding: 36px 0 72px 0;
+}
+
+.intro-section--welcome .intro-heading {
+  font-size: clamp(2.8rem, 4.5vw, 4rem);
+  line-height: 1.05;
+  letter-spacing: -0.05em;
+  margin-left: 0;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.intro-section--welcome .intro-subheading {
+  font-size: clamp(1.15rem, 1.5vw, 1.35rem);
+  font-weight: 700;
+  line-height: 1.55;
+  color: #000000;
+  margin-bottom: 20px;
+  max-width: 600px;
+}
+
+.intro-section--welcome .intro-description {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.75;
+  color: #12282c;
+  margin-bottom: 20px;
+  max-width: 600px;
+}
+
+.intro-section--welcome .intro-description:last-child {
+  margin-bottom: 0;
+}
+
 /* Brand Section & Wrapper */
 .brand-wrapper {
   position: relative;
@@ -837,6 +873,16 @@ h1, h2, h3, h4 {
   .intro-description {
     font-size: 20px;
     line-height: 1.5;
+  }
+
+  .intro-section--welcome .intro-subheading {
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+
+  .intro-section--welcome .intro-description {
+    font-size: 16px;
+    line-height: 1.6;
   }
   
   .intro-img {
