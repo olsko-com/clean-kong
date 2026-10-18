@@ -2147,6 +2147,239 @@ h1, h2, h3, h4 {
   }
 }
 
+/* ==========================================================================
+   Lifestyle Action Showcase Section (/entwicklung)
+   ========================================================================== */
+
+.lifestyle-showcase-section {
+  padding: 20px 0 110px 0;
+  background-color: var(--bg-primary);
+  position: relative;
+  z-index: 10;
+}
+
+.lifestyle-showcase-section .container {
+  max-width: 1380px;
+}
+
+.lifestyle-showcase-header {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto 56px auto;
+}
+
+.lifestyle-kicker {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #ef4488;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.lifestyle-section-title {
+  font-size: clamp(2.4rem, 4vw, 3.8rem);
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: -0.05em;
+  line-height: 1.06;
+  color: #000000;
+  margin-bottom: 14px;
+}
+
+.lifestyle-section-subtitle {
+  font-size: 1.12rem;
+  font-weight: 500;
+  line-height: 1.65;
+  color: #12282c;
+}
+
+.lifestyle-banners-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+}
+
+.lifestyle-banner-card {
+  position: relative;
+  border-radius: 36px;
+  overflow: hidden;
+  border: 2px solid rgba(255, 255, 255, 0.82);
+  box-shadow: 0 28px 65px rgba(18, 40, 44, 0.16);
+  background: #111113;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+}
+
+.lifestyle-banner-media {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.lifestyle-banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right center;
+  display: block;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.lifestyle-banner-card--reverse .lifestyle-banner-img {
+  object-position: left center;
+}
+
+.lifestyle-banner-card:hover .lifestyle-banner-img {
+  transform: scale(1.03);
+}
+
+/* Subtle directional gradient so text on the open side of the 16:9 photo is ultra-legible */
+.lifestyle-banner-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(17, 17, 19, 0.82) 0%,
+    rgba(17, 17, 19, 0.58) 38%,
+    rgba(17, 17, 19, 0.08) 65%,
+    rgba(17, 17, 19, 0) 100%
+  );
+}
+
+.lifestyle-banner-card--reverse .lifestyle-banner-media::after {
+  background: linear-gradient(
+    270deg,
+    rgba(17, 17, 19, 0.82) 0%,
+    rgba(17, 17, 19, 0.58) 38%,
+    rgba(17, 17, 19, 0.08) 65%,
+    rgba(17, 17, 19, 0) 100%
+  );
+}
+
+.lifestyle-banner-content {
+  position: relative;
+  z-index: 2;
+  max-width: 540px;
+  padding: 52px 56px;
+  color: #ffffff;
+}
+
+.lifestyle-banner-card--reverse {
+  justify-content: flex-end;
+}
+
+.lifestyle-badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.lifestyle-cat-pill {
+  font-size: 0.76rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  padding: 6px 14px;
+  border-radius: 999px;
+}
+
+.lifestyle-product-pill {
+  font-size: 0.8rem;
+  font-weight: 900;
+  font-style: italic;
+  color: #ffffff;
+  background: #ef4488;
+  padding: 6px 14px;
+  border-radius: 999px;
+  box-shadow: 0 6px 16px rgba(239, 68, 136, 0.35);
+}
+
+.lifestyle-product-pill--mint {
+  background: #00b3a4;
+  box-shadow: 0 6px 16px rgba(0, 179, 164, 0.35);
+}
+
+.lifestyle-banner-title {
+  font-size: clamp(2rem, 3.2vw, 2.9rem);
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: -0.045em;
+  line-height: 1.08;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.lifestyle-banner-desc {
+  font-size: 1.05rem;
+  font-weight: 500;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 28px;
+}
+
+@media (max-width: 992px) {
+  .lifestyle-banner-card,
+  .lifestyle-banner-card--reverse {
+    flex-direction: column;
+    min-height: auto;
+    justify-content: flex-start;
+  }
+
+  .lifestyle-banner-media {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    height: auto;
+  }
+
+  .lifestyle-banner-media::after,
+  .lifestyle-banner-card--reverse .lifestyle-banner-media::after {
+    background: linear-gradient(180deg, rgba(17, 17, 19, 0) 65%, rgba(17, 17, 19, 0.85) 100%);
+  }
+
+  .lifestyle-banner-content {
+    max-width: 100%;
+    padding: 28px 28px 34px 28px;
+    background: #111113;
+  }
+}
+
+@media (max-width: 768px) {
+  .lifestyle-showcase-section {
+    padding: 10px 0 80px 0;
+  }
+
+  .lifestyle-showcase-header {
+    margin-bottom: 36px;
+  }
+
+  .lifestyle-banners-stack {
+    gap: 28px;
+  }
+
+  .lifestyle-banner-card {
+    border-radius: 24px;
+  }
+
+  .lifestyle-banner-content {
+    padding: 24px 22px 28px 22px;
+  }
+}
+
+
 
 
 

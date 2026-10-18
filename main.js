@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- Product Quick-View Modal (<dialog>) ---
   const modal = document.getElementById('product-modal');
   const modalCloseBtn = document.getElementById('modal-close-btn');
-  const detailTriggers = document.querySelectorAll('.product-detail-btn, .v2-detail-link, .v2-cutout-stage');
+  const detailTriggers = document.querySelectorAll('.product-detail-btn, .v2-detail-link, .v2-cutout-stage, .lifestyle-modal-trigger');
 
   if (modal && detailTriggers.length > 0) {
     const modalImg = document.getElementById('modal-img');
@@ -163,15 +163,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     detailTriggers.forEach(btn => {
       btn.addEventListener('click', () => {
-        const card = btn.closest('.product-card, .v2-product-item');
+        const card = btn.closest('.product-card, .v2-product-item, .lifestyle-banner-card');
         if (!card) return;
 
-        const imgEl = card.querySelector('.product-cutout-img, .v2-cutout-img');
-        const catEl = card.querySelector('.product-category-tag, .v2-meta-cat');
-        const packEl = card.querySelector('.product-pack-badge, .v2-meta-edition');
-        const titleEl = card.querySelector('.product-title, .v2-item-title');
+        const imgEl = card.querySelector('.product-cutout-img, .v2-cutout-img, .lifestyle-banner-img');
+        const catEl = card.querySelector('.product-category-tag, .v2-meta-cat, .lifestyle-cat-pill');
+        const packEl = card.querySelector('.product-pack-badge, .v2-meta-edition, .lifestyle-product-pill');
+        const titleEl = card.querySelector('.product-title, .v2-item-title, .lifestyle-modal-product-title');
         const claimEl = card.querySelector('.product-claim, .v2-item-claim');
-        const descEl = card.querySelector('.product-desc, .v2-item-desc');
+        const descEl = card.querySelector('.product-desc, .v2-item-desc, .lifestyle-banner-desc');
         const featureEls = card.querySelectorAll('.product-features li');
         const inlineSpecs = card.getAttribute('data-specs') || '';
         const extraTip = card.getAttribute('data-tip') || '';
