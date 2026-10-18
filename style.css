@@ -474,27 +474,46 @@ h1, h2, h3, h4 {
 }
 
 .intro-section--welcome {
-  padding: 90px 0 100px 0;
-  min-height: 540px;
+  padding: 120px 0 130px 0;
+  min-height: 680px;
   display: flex;
   align-items: center;
+  justify-content: center;
   overflow: hidden;
+}
+
+.intro-section--welcome .intro-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.intro-section--welcome .intro-image-col {
+  position: static;
 }
 
 .intro-section--welcome .intro-img--edge-left {
   position: absolute;
   left: -20px;
   bottom: 0;
-  height: 95%;
-  max-height: 560px;
+  height: 96%;
+  max-height: 670px;
   width: auto;
-  max-width: 46vw;
+  max-width: 48vw;
   object-fit: contain;
   object-position: left bottom;
   margin: 0;
   z-index: 12;
   pointer-events: none;
   animation: floatIntroLeft 8s infinite ease-in-out;
+}
+
+.intro-section--welcome .intro-text-col {
+  align-items: center;
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto;
 }
 
 .intro-section--welcome .intro-heading {
@@ -504,6 +523,7 @@ h1, h2, h3, h4 {
   margin-left: 0;
   margin-bottom: 18px;
   color: #000000;
+  text-align: center;
 }
 
 .intro-section--welcome .intro-subheading {
@@ -513,6 +533,7 @@ h1, h2, h3, h4 {
   color: #000000;
   margin-bottom: 14px;
   max-width: 600px;
+  text-align: center;
 }
 
 .intro-section--welcome .intro-description {
@@ -522,6 +543,7 @@ h1, h2, h3, h4 {
   color: #12282c;
   margin-bottom: 16px;
   max-width: 600px;
+  text-align: center;
 }
 
 .intro-section--welcome .intro-description:last-child {
