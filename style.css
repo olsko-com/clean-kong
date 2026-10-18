@@ -514,13 +514,14 @@ h1, h2, h3, h4 {
 .intro-section--welcome .intro-img--tower-right {
   position: absolute;
   right: clamp(8px, 3vw, 56px);
-  bottom: -65px;
-  height: 114%;
-  max-height: 850px;
+  top: 100px;
+  bottom: auto;
+  height: 110%;
+  max-height: 820px;
   width: auto;
   max-width: 36vw;
   object-fit: contain;
-  object-position: right bottom;
+  object-position: right top;
   margin: 0;
   z-index: 1;
   pointer-events: none;
@@ -984,7 +985,8 @@ h1, h2, h3, h4 {
 
   .intro-section--welcome .intro-img--tower-right {
     right: 12px;
-    bottom: -10px;
+    top: auto;
+    bottom: -15px;
     height: 265px;
     max-height: 265px;
     max-width: 38vw;
