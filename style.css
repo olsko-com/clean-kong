@@ -530,7 +530,7 @@ h1, h2, h3, h4 {
 .intro-section--welcome .intro-text-col {
   align-items: center;
   text-align: center;
-  max-width: 600px;
+  max-width: 840px;
   margin: 0 auto;
 }
 
@@ -550,7 +550,7 @@ h1, h2, h3, h4 {
   line-height: 1.32;
   color: #000000;
   margin-bottom: 14px;
-  max-width: 600px;
+  max-width: 840px;
   text-align: center;
 }
 
@@ -560,7 +560,7 @@ h1, h2, h3, h4 {
   line-height: 1.42;
   color: #12282c;
   margin-bottom: 16px;
-  max-width: 600px;
+  max-width: 840px;
   text-align: center;
 }
 
