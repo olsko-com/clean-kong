@@ -194,8 +194,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (modalCategory) {
           modalCategory.textContent = catEl ? catEl.textContent : (card.getAttribute('data-cat-label') || 'CleanKong');
         }
-        if (modalPack && packEl) {
-          modalPack.textContent = packEl.textContent;
+        if (modalPack) {
+          modalPack.textContent = packEl ? packEl.textContent : (card.getAttribute('data-pack-label') || 'Edition');
           modalPack.className = 'product-pack-badge';
         }
         if (modalTitle && titleEl) modalTitle.textContent = titleEl.textContent;

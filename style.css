@@ -2209,7 +2209,8 @@ h1, h2, h3, h4 {
   border: 2px solid rgba(255, 255, 255, 0.82);
   box-shadow: 0 28px 65px rgba(18, 40, 44, 0.16);
   background: #111113;
-  min-height: 520px;
+  min-height: 640px;
+  aspect-ratio: 16 / 9;
   display: flex;
   align-items: center;
 }
@@ -2226,13 +2227,13 @@ h1, h2, h3, h4 {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: right center;
+  object-position: center center;
   display: block;
   transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .lifestyle-banner-card--reverse .lifestyle-banner-img {
-  object-position: left center;
+  object-position: center center;
 }
 
 .lifestyle-banner-card:hover .lifestyle-banner-img {
@@ -2336,6 +2337,7 @@ h1, h2, h3, h4 {
   .lifestyle-banner-card--reverse {
     flex-direction: column;
     min-height: auto;
+    aspect-ratio: auto;
     justify-content: flex-start;
   }
 
