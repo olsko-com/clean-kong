@@ -466,29 +466,29 @@ h1, h2, h3, h4 {
 }
 
 .intro-section--welcome .intro-heading {
-  font-size: clamp(2.8rem, 4.5vw, 4rem);
-  line-height: 1.05;
-  letter-spacing: -0.05em;
+  font-size: clamp(2.4rem, 3.8vw, 3.35rem);
+  line-height: 1.08;
+  letter-spacing: -0.045em;
   margin-left: 0;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   color: #000000;
 }
 
 .intro-section--welcome .intro-subheading {
-  font-size: clamp(1.15rem, 1.5vw, 1.35rem);
+  font-size: clamp(1.1rem, 1.4vw, 1.28rem);
   font-weight: 700;
-  line-height: 1.55;
+  line-height: 1.38;
   color: #000000;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   max-width: 600px;
 }
 
 .intro-section--welcome .intro-description {
-  font-size: 20px;
+  font-size: 19px;
   font-weight: 500;
-  line-height: 1.75;
+  line-height: 1.6;
   color: #12282c;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   max-width: 600px;
 }
 
@@ -550,12 +550,12 @@ h1, h2, h3, h4 {
 }
 
 .brand-heading {
-  font-size: 4rem;
+  font-size: clamp(2.4rem, 3.8vw, 3.4rem);
   font-weight: 900;
   font-style: italic;
   color: #ffffff;
-  letter-spacing: -0.05em;
-  margin-bottom: 24px;
+  letter-spacing: -0.045em;
+  margin-bottom: 22px;
 }
 
 .highlight-pink {
@@ -1098,22 +1098,22 @@ h1, h2, h3, h4 {
 }
 
 .products-hero-title {
-  font-size: clamp(2.8rem, 4.8vw, 4.6rem);
+  font-size: clamp(2.4rem, 3.8vw, 3.5rem);
   font-weight: 900;
   font-style: italic;
-  letter-spacing: -0.05em;
-  line-height: 1.05;
+  letter-spacing: -0.045em;
+  line-height: 1.08;
   color: #000000;
-  margin-bottom: 22px;
+  margin-bottom: 18px;
 }
 
 .products-hero-lead {
-  font-size: clamp(1.1rem, 1.5vw, 1.35rem);
+  font-size: clamp(1.08rem, 1.4vw, 1.25rem);
   font-weight: 500;
-  line-height: 1.65;
+  line-height: 1.48;
   color: #12282c;
   max-width: 620px;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .products-hero-actions {
@@ -1992,11 +1992,11 @@ h1, h2, h3, h4 {
 }
 
 .v2-item-title {
-  font-size: 1.9rem;
+  font-size: 1.62rem;
   font-weight: 900;
   font-style: italic;
-  letter-spacing: -0.045em;
-  line-height: 1.1;
+  letter-spacing: -0.04em;
+  line-height: 1.12;
   color: #000000;
   margin-bottom: 10px;
 }
@@ -2004,7 +2004,7 @@ h1, h2, h3, h4 {
 .v2-item-desc {
   font-size: 0.98rem;
   font-weight: 500;
-  line-height: 1.55;
+  line-height: 1.5;
   color: #12282c;
   max-width: 340px;
   margin: 0 auto 16px auto;
@@ -2082,7 +2082,7 @@ h1, h2, h3, h4 {
 }
 
 .v2-open-grid.v2-lookbook-mode .v2-item-title {
-  font-size: clamp(2.4rem, 3.6vw, 3.4rem);
+  font-size: clamp(2.1rem, 3.2vw, 2.9rem);
   margin-bottom: 14px;
 }
 
@@ -2180,19 +2180,19 @@ h1, h2, h3, h4 {
 }
 
 .lifestyle-section-title {
-  font-size: clamp(2.4rem, 4vw, 3.8rem);
+  font-size: clamp(2.2rem, 3.5vw, 3.2rem);
   font-weight: 900;
   font-style: italic;
-  letter-spacing: -0.05em;
-  line-height: 1.06;
+  letter-spacing: -0.045em;
+  line-height: 1.08;
   color: #000000;
   margin-bottom: 14px;
 }
 
 .lifestyle-section-subtitle {
-  font-size: 1.12rem;
+  font-size: 1.1rem;
   font-weight: 500;
-  line-height: 1.65;
+  line-height: 1.48;
   color: #12282c;
 }
 
@@ -2314,11 +2314,11 @@ h1, h2, h3, h4 {
 }
 
 .lifestyle-banner-title {
-  font-size: clamp(2rem, 3.2vw, 2.9rem);
+  font-size: clamp(1.75rem, 2.6vw, 2.4rem);
   font-weight: 900;
   font-style: italic;
-  letter-spacing: -0.045em;
-  line-height: 1.08;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
   color: #ffffff;
   margin-bottom: 16px;
 }
