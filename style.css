@@ -2158,8 +2158,15 @@ h1, h2, h3, h4 {
   z-index: 10;
 }
 
-.lifestyle-showcase-section .container {
+.lifestyle-showcase-section .container,
+.lifestyle-inline-container {
   max-width: 1380px;
+}
+
+.lifestyle-inline-container {
+  margin-top: 44px;
+  position: relative;
+  z-index: 5;
 }
 
 .lifestyle-showcase-header {
