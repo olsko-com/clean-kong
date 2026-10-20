@@ -625,7 +625,7 @@ h1, h2, h3, h4 {
       rgba(17, 17, 19, 0.24) 75%,
       rgba(17, 17, 19, 0.08) 100%
     ),
-    url('assets/Fahrer-putzt-Armaturenbrett-Gorilla-im-Spiegel.jpg');
+    url('assets/Pfannenputzen-mit-Mint-Schwamm.jpg');
   background-repeat: no-repeat;
   background-position: center center, right center;
   background-size: cover, cover;
@@ -1054,7 +1054,7 @@ h1, h2, h3, h4 {
         rgba(17, 17, 19, 0.82) 0%,
         rgba(17, 17, 19, 0.78) 100%
       ),
-      url('assets/Fahrer-putzt-Armaturenbrett-Gorilla-im-Spiegel.jpg');
+      url('assets/Pfannenputzen-mit-Mint-Schwamm.jpg');
     background-position: center center, center center;
   }
 
