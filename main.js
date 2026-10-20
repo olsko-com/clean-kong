@@ -242,5 +242,32 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // --- Sponge Tower Scroll-Parallax + Float Enhancement ---
+  const spongeTower = document.querySelector('.intro-img--tower-right');
+  const welcomeSection = document.querySelector('.intro-section--welcome');
+
+  if (spongeTower && welcomeSection) {
+    let ticking = false;
+    const updateTowerParallax = () => {
+      const rect = welcomeSection.getBoundingClientRect();
+      const viewportHeight = window.innerHeight || 800;
+      // Normalized progress (-1 to 1) while section passes through viewport
+      const progress = (viewportHeight * 0.5 - (rect.top + rect.height * 0.5)) / viewportHeight;
+      const clamped = Math.max(-1, Math.min(1, progress));
+      const offsetY = Math.round(clamped * -38);
+      spongeTower.style.setProperty('--tower-scroll-y', `${offsetY}px`);
+      ticking = false;
+    };
+
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateTowerParallax);
+        ticking = true;
+      }
+    }, { passive: true });
+
+    updateTowerParallax();
+  }
 });
 

@@ -526,7 +526,19 @@ h1, h2, h3, h4 {
   z-index: 1;
   pointer-events: none;
   filter: drop-shadow(-14px 18px 28px rgba(18, 40, 44, 0.16));
-  animation: none;
+  will-change: transform;
+  animation: floatSpongeTower 5.2s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+}
+
+@keyframes floatSpongeTower {
+  0%, 100% {
+    transform: translate3d(0, calc(var(--tower-scroll-y, 0px) + 12px), 0) rotate(-1.4deg);
+    filter: drop-shadow(-14px 18px 26px rgba(18, 40, 44, 0.15));
+  }
+  50% {
+    transform: translate3d(0, calc(var(--tower-scroll-y, 0px) - 24px), 0) rotate(1.8deg) scale(1.025);
+    filter: drop-shadow(-22px 34px 38px rgba(18, 40, 44, 0.24));
+  }
 }
 
 .intro-section--welcome .intro-text-col {
