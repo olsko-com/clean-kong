@@ -2530,17 +2530,15 @@ h1, h2, h3, h4 {
 
 .lineup-stage-card {
   position: relative;
-  border-radius: 36px;
-  overflow: hidden;
-  border: 2px solid rgba(255, 255, 255, 0.85);
-  box-shadow: 0 28px 65px rgba(18, 40, 44, 0.14);
-  background: #ffffff;
+  max-width: 1220px;
+  margin: 0 auto;
 }
 
 .lineup-stage-img {
   width: 100%;
   height: auto;
   display: block;
+  filter: drop-shadow(0 24px 36px rgba(18, 40, 44, 0.16));
 }
 
 @media (max-width: 768px) {
