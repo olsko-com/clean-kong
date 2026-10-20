@@ -611,6 +611,33 @@ h1, h2, h3, h4 {
   z-index: auto;
 }
 
+.brand-wrapper--bg-photo::before,
+.brand-wrapper--bg-photo::after {
+  display: none !important;
+}
+
+.brand-wrapper--bg-photo .brand-info-block {
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(17, 17, 19, 0.88) 0%,
+      rgba(17, 17, 19, 0.72) 42%,
+      rgba(17, 17, 19, 0.24) 75%,
+      rgba(17, 17, 19, 0.08) 100%
+    ),
+    url('assets/Fahrer-putzt-Armaturenbrett-Gorilla-im-Spiegel.jpg');
+  background-repeat: no-repeat;
+  background-position: center center, right center;
+  background-size: cover, cover;
+}
+
+.brand-wrapper--bg-photo .kong-usp-card {
+  background: rgba(17, 17, 19, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
 .brand-container {
   display: flex;
   justify-content: flex-start;
@@ -1013,6 +1040,22 @@ h1, h2, h3, h4 {
 
   .brand-info-block {
     padding: 50px 20px 205px 20px;
+  }
+
+  .brand-wrapper--bg-photo .brand-info-block {
+    padding: 60px 20px 68px 20px;
+    background-image:
+      linear-gradient(
+        180deg,
+        rgba(17, 17, 19, 0.82) 0%,
+        rgba(17, 17, 19, 0.78) 100%
+      ),
+      url('assets/Fahrer-putzt-Armaturenbrett-Gorilla-im-Spiegel.jpg');
+    background-position: center center, center center;
+  }
+
+  .brand-wrapper--bg-photo::after {
+    display: none !important;
   }
 
   .brand-container {
