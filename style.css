@@ -2446,9 +2446,9 @@ h1, h2, h3, h4 {
 .lifestyle-banner-card--reverse .lifestyle-banner-media::after {
   background: linear-gradient(
     270deg,
-    rgba(17, 17, 19, 0.82) 0%,
-    rgba(17, 17, 19, 0.58) 38%,
-    rgba(17, 17, 19, 0.08) 65%,
+    rgba(17, 17, 19, 0.84) 0%,
+    rgba(17, 17, 19, 0.68) 46%,
+    rgba(17, 17, 19, 0.12) 72%,
     rgba(17, 17, 19, 0) 100%
   );
 }
@@ -2456,13 +2456,18 @@ h1, h2, h3, h4 {
 .lifestyle-banner-content {
   position: relative;
   z-index: 2;
-  max-width: 540px;
+  max-width: 560px;
   padding: 52px 56px;
   color: #ffffff;
 }
 
 .lifestyle-banner-card--reverse {
   justify-content: flex-end;
+}
+
+.lifestyle-banner-card--reverse .lifestyle-banner-content {
+  max-width: 600px;
+  margin-right: clamp(48px, 6vw, 96px);
 }
 
 .lifestyle-badge-row {
@@ -2541,8 +2546,10 @@ h1, h2, h3, h4 {
     background: linear-gradient(180deg, rgba(17, 17, 19, 0) 65%, rgba(17, 17, 19, 0.85) 100%);
   }
 
-  .lifestyle-banner-content {
+  .lifestyle-banner-content,
+  .lifestyle-banner-card--reverse .lifestyle-banner-content {
     max-width: 100%;
+    margin-right: 0;
     padding: 28px 28px 34px 28px;
     background: #111113;
   }
