@@ -629,6 +629,7 @@ h1, h2, h3, h4 {
 }
 
 .brand-wrapper--bg-photo .brand-info-block {
+  padding: 56px 0 44px 0;
   background-image:
     linear-gradient(
       90deg,
@@ -639,7 +640,7 @@ h1, h2, h3, h4 {
     ),
     url('assets/Mann-und-Gorilla-beim-Spuelen.jpg');
   background-repeat: no-repeat;
-  background-position: center center, right center;
+  background-position: center top, right top;
   background-size: cover, cover;
 }
 
@@ -651,6 +652,7 @@ h1, h2, h3, h4 {
 .brand-wrapper--bg-photo .kong-usp-grid {
   max-width: 680px;
   gap: 16px;
+  margin-top: 24px;
 }
 
 .brand-wrapper--bg-photo .kong-usp-card {
