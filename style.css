@@ -1006,7 +1006,7 @@ h1, h2, h3, h4 {
   }
 
   .intro-section--welcome {
-    padding: 50px 0 310px 0;
+    padding: 50px 0 335px 0;
     min-height: auto;
   }
 
@@ -1033,9 +1033,9 @@ h1, h2, h3, h4 {
   .intro-section--welcome .intro-img--edge-left {
     left: -12px;
     bottom: 0;
-    height: 280px;
-    max-height: 280px;
-    max-width: 58vw;
+    height: 330px;
+    max-height: 330px;
+    max-width: 64vw;
   }
 
   .intro-section--welcome .intro-img--tower-right {
