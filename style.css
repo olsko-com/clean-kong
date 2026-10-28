@@ -1039,12 +1039,12 @@ h1, h2, h3, h4 {
   }
 
   .intro-section--welcome .intro-img--tower-right {
-    right: 12px;
+    right: 6px;
     top: auto;
-    bottom: -15px;
-    height: 265px;
-    max-height: 265px;
-    max-width: 38vw;
+    bottom: -65px;
+    height: 325px;
+    max-height: 325px;
+    max-width: 46vw;
   }
 
   .brand-heading {
@@ -1075,11 +1075,11 @@ h1, h2, h3, h4 {
     background-image:
       linear-gradient(
         180deg,
-        rgba(17, 17, 19, 0.82) 0%,
-        rgba(17, 17, 19, 0.78) 100%
+        rgba(17, 17, 19, 0.75) 0%,
+        rgba(17, 17, 19, 0.70) 100%
       ),
       url('assets/Mann-und-Gorilla-beim-Spuelen.jpg');
-    background-position: center center, center center;
+    background-position: center center, 74% top;
   }
 
   .brand-wrapper--bg-photo::after {
